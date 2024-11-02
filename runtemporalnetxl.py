@@ -97,8 +97,14 @@ for i, frame_file in enumerate(frame_files):
     canny_image = Image.fromarray(canny_image)
 
     # Generate image
+    '''
     image = pipe(
        prompt, num_inference_steps=20, generator=generator, image=[last_generated_image, canny_image], controlnet_conditioning_scale=[0.6, 0.7]
+       #prompt, num_inference_steps=20, generator=generator, image=canny_image, controlnet_conditioning_scale=0.5
+    ).images[0]
+    '''
+    image = pipe(
+       prompt, num_inference_steps=20, generator=generator, image=[last_generated_image, canny_image], controlnet_conditioning_scale=[0.15, 0.5]
        #prompt, num_inference_steps=20, generator=generator, image=canny_image, controlnet_conditioning_scale=0.5
     ).images[0]
     
