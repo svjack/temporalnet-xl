@@ -61,7 +61,8 @@ else:
     initial_frame_path = os.path.join(frames_dir, "frame0000.png")
     last_generated_image = load_image(initial_frame_path)
 
-base_model_path = "stabilityai/stable-diffusion-xl-base-1.0"
+#base_model_path = "stabilityai/stable-diffusion-xl-base-1.0"
+base_model_path = "svjack/GenshinImpact_XL_Base"
 controlnet1_path = "CiaraRowles/controlnet-temporalnet-sdxl-1.0"
 controlnet2_path = "diffusers/controlnet-canny-sdxl-1.0"
 
